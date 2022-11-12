@@ -1,21 +1,24 @@
 package rent_car;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Entity
 @Data
-@Table(name ="rent_detail")
-public class RentDetail {
+@Table(name = "rent_detail")
+public class RentDetail{
+
+
 
     @Id
-    @GeneratedValue
-    private double price;
+    private int id;
 
+
+    @Column
+    private double price;
+    @Column
     private String startDate;
+    @Column
     private String endDate;
 
 
